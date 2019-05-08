@@ -1,0 +1,22 @@
+import random
+
+secret = random.randint(1, 10)
+temp = input("猜数字：")
+guess = int(temp)
+d = 0
+while (guess != secret) & (d < 5):
+    d = d+1
+    if guess == secret:
+        print("猜对了")
+    else:
+        if guess > secret:
+            print("大了")
+        else:
+            print("小了")
+    temp = input("猜错了，重新猜测：")
+    guess = int(temp)
+if guess == secret:
+    print("猜对了")
+else:
+    print("没有猜对")
+print("ganme over")
