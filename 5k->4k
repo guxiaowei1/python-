@@ -1,0 +1,14 @@
+
+f = open('5k.txt')
+b = []
+
+for each_line in f:
+    (role1, role2, role3, role4, role5, role6) = each_line.split('/',5)
+    role = '../'+role6
+    b.append(role)
+
+
+print(role)
+file = open('4k.txt', 'w')
+file.writelines(b)
+file.close()
